@@ -15,7 +15,7 @@ const Pagination: React.FC<PaginationProps> = ({
   onPreviousPage,
 }) => {
   return (
-    <div className="flex justify-center mt-4 mb-5">
+    <div className="flex justify-center mt-4 pb-[25px] ">
       <button
         onClick={onPreviousPage}
         className={`mr-2 px-4 py-2 rounded ${currentPage === 1 ? 'opacity-50 cursor-not-allowed' : 'bg-yellow-500 text-white'}`}

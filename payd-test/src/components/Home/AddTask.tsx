@@ -1,12 +1,8 @@
 import React, { useState } from 'react';
-import { Card, CardHeader, CardBody, Heading, Icon, Tooltip } from '@chakra-ui/react';
+import { Card, CardHeader, CardBody, Heading, Icon, Tooltip, useToast } from '@chakra-ui/react';
 import { HiPlusCircle} from 'react-icons/hi';
 import { addTask } from '../api'; 
 import { useTaskContext } from './TaskContext';
-
-
-
-
 
 
 
@@ -14,15 +10,22 @@ import { useTaskContext } from './TaskContext';
   const [taskName, setTaskName] = useState('');
   const [taskDescription, setTaskDescription] = useState('');
   const [userId, setUserId] = useState('');
+  const toast = useToast();
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     // Validate form fields
     if (!taskName.trim() || !taskDescription.trim() || !userId.trim()) {
-      alert('Please fill in all fields');
-      return;
-    }
+        toast({
+          title: "Please fill in all fields",
+          status: "warning",
+          duration: 5000,
+          isClosable: true,
+          position: 'top'
+        });
+        return;
+      }
 
     // Create a new task object
     const newTask = {
@@ -39,9 +42,21 @@ import { useTaskContext } from './TaskContext';
       setTaskName('');
       setTaskDescription('');
       setUserId('');
-      alert('Task added successfully!');
+      toast({
+        title: "Task added successfully!",
+        status: "success",
+        duration: 5000,
+        isClosable: true,
+        position: 'top'
+      });
     } else {
-      alert('Failed to add task');
+        toast({
+            title: "Failed to add task",
+            status: "error",
+            duration: 5000,
+            isClosable: true,
+            position: 'top'
+          });
     }
   };
 

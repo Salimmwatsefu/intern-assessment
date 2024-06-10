@@ -6,7 +6,7 @@ const DueTasks: React.FC = () => {
   // Calculate today's date and the date 2 days from now
   const today = new Date();
   const twoDaysFromNow = new Date();
-  twoDaysFromNow.setDate(today.getDate() + 2);
+  twoDaysFromNow.setDate(today.getDate() + 1);
 
 
   // Format the dates in YYYY-MM-DD format
