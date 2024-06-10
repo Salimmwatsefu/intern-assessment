@@ -11,6 +11,7 @@ Task Flow is a simple Todo List App that helps you manage your tasks well to hel
 2. [Usage](#usage)
 3. [Components](#components)
 4. [API](#api)
+5. [Edge Cases](#edge-cases)
 
 
 ## Installation
@@ -117,6 +118,16 @@ Link: https://jsonplaceholder.typicode.com/posts
 This is the API Link which just a placeholder
 
 You can read more about it here : https://jsonplaceholder.typicode.com/
+
+
+## Edge Cases
+
+
+### Problem:
+Currently, the task data is generated randomly each time the component mounts or updates. As a result, users may observe different priorities and due dates each time they interact with the application, which can be confusing and misleading.
+
+### Reasoning:
+The API used to fetch tasks does not provide fields for priorities and due dates. To enhance the realism and usability of the todo list application, it's important to incorporate features like task priorities and due dates. By generating these values randomly and manually, we simulate real-world scenarios where tasks have varying levels of importance and deadlines.
 
 
 
