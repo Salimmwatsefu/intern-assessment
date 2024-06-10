@@ -1,12 +1,9 @@
-Sure! Below is a basic structure for documenting your React project. This includes sections such as project description, installation, usage, component documentation, and contributing guidelines. You can expand upon each section based on your project's specific details.
 
----
-
-# Project Name
+# Task Flow
 
 ## Description
 
-A brief description of what your project does, its features, and its purpose.
+Task Flow is a simple Todo List App that helps you manage your tasks well to help increase in productivity
 
 ## Table of Contents
 
@@ -22,8 +19,8 @@ Instructions on how to install and set up your project locally.
 
 ### Prerequisites
 
-- Node.js (version X.X.X)
-- npm (version X.X.X) or yarn (version X.X.X)
+- Node.js (version 22.2.0)
+- npm (version 10.7.0)
 
 ### Steps
 
@@ -41,19 +38,12 @@ Instructions on how to install and set up your project locally.
    ```bash
    npm install
    ```
-   or
-   ```bash
-   yarn install
-   ```
 
 4. Start the development server:
    ```bash
    npm start
    ```
-   or
-   ```bash
-   yarn start
-   ```
+
 
 ## Usage
 
@@ -90,7 +80,7 @@ Manages sub-navigation by providing links to different task views and a button t
 ### 4. AllTasks Component
 Renders a list of all tasks.
 
-### 5. ### HighPriorityTasks Component
+### 5. HighPriorityTasks Component
 Renders a list of tasks with high priority.
 
 ### 6. DueTasks Component
@@ -118,6 +108,15 @@ Purpose: Provides typescript interfaces for defining task objects and an array o
 
    ### b. addTask Function
    Purpose: Posts a new task to an external API (https://jsonplaceholder.typicode.com/posts). Simulates task addition by generating a random ID starting from 101.
+
+
+## API
+
+Link: https://jsonplaceholder.typicode.com/posts
+
+This is the API Link which just a placeholder
+
+You can read more about it here : https://jsonplaceholder.typicode.com/
 
 
 
