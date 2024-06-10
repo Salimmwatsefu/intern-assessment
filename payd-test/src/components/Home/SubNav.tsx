@@ -11,7 +11,7 @@ import { useTaskContext } from './TaskContext';
 
 const SubNav: React.FC = () => {
   const links = [
-    { to: '/', label: 'All (34)' },
+    { to: '/', label: 'All' },
     { to: '/high-priority', label: 'High Priority' },
     { to: '/due', label: 'Due' },
   ];
