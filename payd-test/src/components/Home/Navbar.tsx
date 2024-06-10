@@ -1,9 +1,11 @@
 import React from 'react'
 import { Avatar} from '@chakra-ui/react'
+import { Outlet } from 'react-router-dom'
+
 
 function Navbar() {
   return (
-    <div className='h-20 border-b border-white/5'>
+    <div className='h-20 border-b border-black/10 bg-black/5'>
         <nav className=' text-gray-300 flex'>
 
             {/*logo */}
@@ -20,6 +22,8 @@ function Navbar() {
             <Avatar bg='yellow.500' name='Salim Mwarika'  />
             </div>
         </nav>
+
+        <Outlet />
     </div>
   )
 }
