@@ -45,7 +45,7 @@ export const addTask = async (newTask: Partial<Task>): Promise<Task | null> => {
         throw new Error('Failed to add task');
       }
       const data: Task = await response.json();
-      // Simulate the addition by assigning a new ID starting from 101
+      
       const addedTask = {
         ...data,
         id: Math.floor(Math.random() * 1000) + 101, // Generate a random ID starting from 101
