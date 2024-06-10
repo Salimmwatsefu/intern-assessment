@@ -5,7 +5,7 @@
 
 Task Flow is a simple Todo List App that helps you manage your tasks well to help increase in productivity
 
-Demo Video: The demo video is in the Public Folder under Videos named **InternAssessmentRecording.mp4**
+Demo Video: The demo video is in the Public Folder under Videos named **InternAssessmentDemo.mp4**
 
 ## Table of Contents
 
