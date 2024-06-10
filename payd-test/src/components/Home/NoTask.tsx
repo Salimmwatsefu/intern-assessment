@@ -13,6 +13,9 @@ function NoTask() {
             </div>
             <div className='text-center'>
                 <p className=' text-lg font-semibold text-gray-100'>What do you need to get done Today?</p>
+                <p className=' text-base text-yellow-900'>You have not added any tasks yet</p>
+                <p className=' text-sm text-gray-500'>Please add one</p>
+
 
             </div>
         </div>

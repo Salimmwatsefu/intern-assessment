@@ -5,7 +5,7 @@ function SubNav() {
 
     const links = [
         {to: '/', label:"All (34)"},
-        {to: '/recent', label:"Recent"},
+        {to: '/high-priority', label:"High Priority"},
         {to: '/due', label:"Due"},
     ]
   return (

@@ -1,12 +1,8 @@
-import React from 'react'
-import NoTask from './NoTask'
+import React from 'react';
+import PostsList from './PostsList';
 
-function AllTasks() {
-  return (
-    <div className='text-gray-100'>
-        <NoTask />
-    </div>
-  )
-}
+const AllTasks: React.FC = () => {
+  return <PostsList />;
+};
 
-export default AllTasks
+export default AllTasks;

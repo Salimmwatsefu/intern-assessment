@@ -6,7 +6,9 @@ import { Route, Routes } from 'react-router-dom';
 import SubNav from './components/Home/SubNav';
 import Layout from './components/Home/Layout';
 import AllTasks from './components/Home/AllTasks';
-import RecentTasks from './components/Home/RecentTasks';
+import RecentTasks from './components/Home/HighPriorityTasks';
+import HighPriorityTasks from './components/Home/HighPriorityTasks';
+import DueTasks from './components/Home/DueTasks';
 
 
 function App() {
@@ -17,7 +19,8 @@ function App() {
 
       <Route path='/' element={<Layout />}>
       <Route index element={<AllTasks />}/>
-      <Route path='/recent' element={<RecentTasks />} />
+      <Route path='/high-priority' element={<HighPriorityTasks />} />
+      <Route path='/due' element={<DueTasks />} />
           
       </Route >
 
