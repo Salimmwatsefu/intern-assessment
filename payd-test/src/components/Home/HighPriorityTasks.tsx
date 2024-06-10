@@ -1,8 +1,11 @@
-import React from 'react';
-import PostsList from './PostsList';
+import React, { useState } from 'react';
+import TasksList from './TasksList';
 
-const HighPriorityPosts: React.FC = () => {
-  return <PostsList filterPriority="high" />;
+
+const HighPriorityTasks: React.FC = () => {
+
+
+  return <TasksList filterPriority="high"  />;
 };
 
-export default HighPriorityPosts;
+export default HighPriorityTasks;

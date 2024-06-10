@@ -17,3 +17,14 @@
     max-height: 65px;
   }
   
+/* AddTask.css (or styled-components or inline styles) */
+.add-task-container {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+  
+  .add-task-container.open {
+    max-height: 200px; /* Adjust height as needed */
+  }
+  

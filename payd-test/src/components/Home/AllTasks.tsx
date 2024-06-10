@@ -1,8 +1,9 @@
-import React from 'react';
-import PostsList from './PostsList';
+import React, { useState } from 'react';
+import TasksList from './TasksList';
 
 const AllTasks: React.FC = () => {
-  return <PostsList />;
+  
+  return <TasksList />;
 };
 
 export default AllTasks;
