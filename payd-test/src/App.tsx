@@ -13,7 +13,7 @@ import DueTasks from './components/Home/DueTasks';
 
 function App() {
   return (
-    <div className=" bg-[#202020] h-screen">
+    <div className=" bg-[#202020] h-full">
 
       <Routes>
 

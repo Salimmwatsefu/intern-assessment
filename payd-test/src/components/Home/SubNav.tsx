@@ -20,7 +20,7 @@ const SubNav: React.FC = () => {
 
   return (
     <div className="text-black w-full">
-      <ul className="flex gap-10 justify-center mt-7">
+      <ul className="flex md:gap-10 gap-5 justify-center md:mt-7 mt-14">
         {links.map((link, index) => (
           <li key={index}>
             <NavLink
@@ -46,7 +46,7 @@ const SubNav: React.FC = () => {
         >
           <button
             onClick={ toggleAddTask } // Call onToggleSidebar to toggle sidebar open/close
-            className="absolute top-[100px] left-[30px] bg-transparent hover:bg-yellow-700 p-1 rounded-lg"
+            className="absolute top-[89px] left-[30px] bg-transparent hover:bg-yellow-700 p-1 rounded-lg"
           >
             <FiSidebar className="text-gray-300 w-8 h-6" />
           </button>

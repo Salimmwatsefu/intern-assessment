@@ -24,7 +24,7 @@ const TasksList: React.FC<TasksListProps> = ({ filterPriority, filterDueDate }) 
   const [tasks, setTasks] = useState<Task[]>([]);
   const [currentPage, setCurrentPage] = useState<number>(1);
   const tasksPerPage = isAddTaskOpen ? 6 : 8; // Adjust tasks per page based on AddTask state
-  const gridCols = isAddTaskOpen ? 'grid-cols-3' : 'grid-cols-4'; // Adjust grid columns based on AddTask state
+  const gridCols = isAddTaskOpen ? 'xl:grid-cols-3' : 'xl:grid-cols-4'; // Adjust grid columns based on AddTask state
 
   useEffect(() => {
     const getTasks = async () => {
@@ -85,20 +85,21 @@ const TasksList: React.FC<TasksListProps> = ({ filterPriority, filterDueDate }) 
       ) : (
         <div>
           <div className=' flex justify-center'>
-          <div className={`mt-10 grid ${gridCols} gap-8`}>
+          <div className={`mt-10 grid ${gridCols} lg:grid-cols-3 md:grid-cols-2    gap-8`}>
             {currentTasks.map(task => (
               <TaskItem key={task.id} task={task} />
             ))}
           </div>
           </div>
+          
           <Pagination
             currentPage={currentPage}
             totalPages={Math.ceil(tasks.length / tasksPerPage)}
             onNextPage={handleNextPage}
             onPreviousPage={handlePreviousPage}
           />
-          <div className="text-center text-gray-400 mt-2">
-            Page {currentPage} of {Math.ceil(tasks.length / tasksPerPage)}
+          <div className="text-center text-gray-400 mt-2 absolute top-[100px] right-[20px] text-xs">
+            {currentPage} / {Math.ceil(tasks.length / tasksPerPage)}
           </div>
         </div>
       )}

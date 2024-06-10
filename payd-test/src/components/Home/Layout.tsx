@@ -10,7 +10,8 @@ function Layout() {
     <TaskProvider>
       <div>
         <Navbar />
-        <div className="flex">
+
+        <div className="xl:flex">
           <div>
             <AddTask />
           </div>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { GrFormNext, GrFormPrevious } from "react-icons/gr";
 
 interface PaginationProps {
   currentPage: number;
@@ -14,20 +15,20 @@ const Pagination: React.FC<PaginationProps> = ({
   onPreviousPage,
 }) => {
   return (
-    <div className="flex justify-center mt-4">
+    <div className="flex justify-center mt-4 mb-5">
       <button
         onClick={onPreviousPage}
-        className={`mr-2 px-4 py-2 rounded ${currentPage === 1 ? 'opacity-50 cursor-not-allowed' : 'bg-blue-500 text-white'}`}
+        className={`mr-2 px-4 py-2 rounded ${currentPage === 1 ? 'opacity-50 cursor-not-allowed' : 'bg-yellow-500 text-white'}`}
         disabled={currentPage === 1}
       >
-        Previous
+        <GrFormPrevious />
       </button>
       <button
         onClick={onNextPage}
-        className={`ml-2 px-4 py-2 rounded ${currentPage >= totalPages ? 'opacity-50 cursor-not-allowed' : 'bg-blue-500 text-white'}`}
+        className={`ml-2 px-4 py-2 rounded ${currentPage >= totalPages ? 'opacity-50 cursor-not-allowed' : 'bg-yellow-500 text-white'}`}
         disabled={currentPage >= totalPages}
       >
-        Next
+        <GrFormNext />
       </button>
     </div>
   );

@@ -48,9 +48,9 @@ import { useTaskContext } from './TaskContext';
   const { isAddTaskOpen } = useTaskContext();
 
   return (
-    <div className="border-r w-[450px] h-[86vh] border-white/5 bg-[#232323]" style={{ display: isAddTaskOpen ? 'block' : 'none' }}>
+    <div className="border-r xl:w-[450px] md:w-full xl:h-[86vh] lg:h-[42vh] border-white/5 bg-[#232323]" style={{ display: isAddTaskOpen ? 'block' : 'none' }}>
         
-      <div className="text-gray-300 flex justify-center pt-20">
+      <div className="text-gray-300 flex justify-center lg:pt-20 pt-16 pb-10">
         
         <Card className="w-[350px]" bgColor={'RGBA(0, 0, 0, 0.16)'}>
           <CardHeader className="flex gap-1">
