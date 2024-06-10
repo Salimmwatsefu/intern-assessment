@@ -1,70 +1,127 @@
-# Getting Started with Create React App
+Sure! Below is a basic structure for documenting your React project. This includes sections such as project description, installation, usage, component documentation, and contributing guidelines. You can expand upon each section based on your project's specific details.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+# Project Name
 
-In the project directory, you can run:
+## Description
 
-### `npm start`
+A brief description of what your project does, its features, and its purpose.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Table of Contents
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. [Installation](#installation)
+2. [Usage](#usage)
+3. [Components](#components)
+4. [API](#api)
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Installation
 
-### `npm run build`
+Instructions on how to install and set up your project locally.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Prerequisites
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Node.js (version X.X.X)
+- npm (version X.X.X) or yarn (version X.X.X)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Steps
 
-### `npm run eject`
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Salimmwatsefu/intern-assessment.git
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. Navigate to the project directory:
+   ```bash
+   cd intern-assessment
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+   or
+   ```bash
+   yarn install
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+4. Start the development server:
+   ```bash
+   npm start
+   ```
+   or
+   ```bash
+   yarn start
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Usage
 
-## Learn More
+Once the project is set up, follow these steps to use the application:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. **Navigating the App:**
+   - Upon launching the application, you'll land on the homepage which displays all tasks, the Add Task Form, which maybe opened or closed based on your liking.
+   - Use the navigation links provided to filter tasks based on priority or due date.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+2. **Adding a Task:**
+   - Fill in the required fields (Task Name, Description, User ID) and click "Add Task" to submit.
+   - You'll receive a notification indicating if the task addition was successful or failed.
 
-### Code Splitting
+3. **Viewing Task Details:**
+   - The task details include the task name, description, user ID, priority, and due date.
+   - In the navigation links, we have All, High Priority and Due
+   - Under All, you can view all tasks
+   - Under High Prioty, you can view high priority tasks
+   - Under Due, you can see all task which are almost due, upto 2 days 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Components
 
-### Making a Progressive Web App
+### 1. Layout Component
+The Layout component serves as the main layout wrapper for the application, providing a consistent structure across pages.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### 2. AddTask Component
+Manages task addition by providing a form for users to input task details such as name, description, and user ID. Upon submission, the task is added to the list. It also displays notifications for successful or failed task addition.
 
-### Advanced Configuration
+### 3. SubNav Component
+Manages sub-navigation by providing links to different task views and a button to toggle the sidebar.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### 4. AllTasks Component
+Renders a list of all tasks.
 
-### Deployment
+### 5. ### HighPriorityTasks Component
+Renders a list of tasks with high priority.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### 6. DueTasks Component
+Renders a list of tasks due within the next two days.
 
-### `npm run build` fails to minify
+### 7. NoTask Component
+Displays a message when there are no tasks to show.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### 8. TaskContext Component
+Manages the state related to task features, specifically controlling the visibility of the add task feature. It provides a context for toggling the visibility of the add task form.
+
+### 9. TaskItem Component
+Displays individual task details in a card-like format.
+
+### 10. TasksList Component
+Displays a list of tasks fetched from an external API. Supports pagination and filtering by priority and due date. Priorities and due dates are generated randomly for each task after fetching to simulate real data.
+Other components such as AllTasks, DueTasks, and HighPriorityTasks utilize this component to display specific subsets of tasks.
+
+### 11. Task Component
+
+Purpose: Provides typescript interfaces for defining task objects and an array of task priorities. Manages the retrieval and addition of tasks from/to an external API.
+
+   ### a. fetchTasks Function
+   Purpose: Fetches tasks from an external API (https://jsonplaceholder.typicode.com/posts) and assigns random priorities to each task.
+
+   ### b. addTask Function
+   Purpose: Posts a new task to an external API (https://jsonplaceholder.typicode.com/posts). Simulates task addition by generating a random ID starting from 101.
+
+
+
+
+
+
+

@@ -2,12 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
+/* Limiting the length of card title that is shown*/
 .truncate {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
   }
   
+
+/* Limiting the length of card body that is shown*/
   .limited-text {
     display: -webkit-box;
     -webkit-line-clamp: 4;
@@ -17,14 +22,5 @@
     max-height: 65px;
   }
   
-/* AddTask.css (or styled-components or inline styles) */
-.add-task-container {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
-  }
-  
-  .add-task-container.open {
-    max-height: 200px; /* Adjust height as needed */
-  }
+
   
