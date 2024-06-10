@@ -7,6 +7,7 @@ function Layout() {
   return (
     <div>
       <Navbar />
+      
       <div className="flex">
         <div >
           <AddTask />

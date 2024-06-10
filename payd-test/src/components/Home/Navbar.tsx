@@ -22,8 +22,6 @@ function Navbar() {
             <Avatar bg='yellow.500' name='Salim Mwarika'  />
             </div>
         </nav>
-
-        <Outlet />
     </div>
   )
 }

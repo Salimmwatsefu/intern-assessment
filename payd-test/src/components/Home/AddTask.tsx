@@ -1,7 +1,7 @@
 import React from 'react'
 import { Card, CardHeader, CardBody, CardFooter, Heading, Icon, Input } from '@chakra-ui/react'
 import { HiPlusCircle } from "react-icons/hi2";
-import { Outlet } from 'react-router-dom';
+
 
 
 
@@ -12,10 +12,10 @@ import { Outlet } from 'react-router-dom';
 function AddTask() {
 
   return (
-    <div className=' border-r w-[500px] h-[86vh] border-white/5 bg-[#232323]'>
+    <div className=' border-r w-[450px] h-[86vh] border-white/5 bg-[#232323]'>
 
         <div className=' text-gray-300 flex justify-center pt-20'>
-            <Card className='w-[400px] ' bgColor={'RGBA(0, 0, 0, 0.16)'}>
+            <Card className='w-[350px] ' bgColor={'RGBA(0, 0, 0, 0.16)'}>
                 <CardHeader className='flex gap-1'>
                 <Icon as={HiPlusCircle} w={7} h={7} color='yellow.700' />
                     <Heading size='sm' className='mt-[3px]' color={'gray.100'}>
